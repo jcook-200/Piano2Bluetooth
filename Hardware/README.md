@@ -19,3 +19,9 @@ I chose the PCM1808 as the ADC. There were other Texas-Instrument audio ADCs, bu
 I chose the CC2564C to allow for Bluetooth communication. It was the only classic Bluetooth-capable transeiver ICs offered by Texas-Instruments. This is an important distinction since some wireless headphones or earbuds do not support audio over Bluetooth low energy (LE) (like the ones I own). There are, for example, Bluetooth-capable STM32s, but they all supported Bluetooth LE and not classic Bluetooth. I wanted to have the possibility to try writing Bluetooth drivers so the transceiver could not have an integrated "upper layer" Bluetooth stack. I had considered using an ESP32 chip and programming it to act as a simple interface, but I wanted to avoid splitting the experimental driver code across multiple devices, complicating the system beyond necessary. Using only an ESP32 would solve this problem, but I wanted to use an STM32 due to the reasons mentioned above.
 
 ### 3. Microcontroller
+I chose the STM32F446RET as the microcontroller. I chose the STM32F series for its fast clock and strong processing power. I could've also chosen the STM32H series, 
+
+## Reflection
+
+### Bluetooth Transciever
+I could've used a tranceiver module. Thsi would have simplified the PCB design and made the manufacuring simpler. For the manufacturing, the skinny traces and clearences approach the manufacturers limits, and the IC in question will have covered pins which will require hot air or reflow to manufacture. The package also has a heat pad in its center meaning that my cheap hot air gun is unlikely to do the trick.
