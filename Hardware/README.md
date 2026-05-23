@@ -16,7 +16,6 @@ I chose to prioritize Texas-Instrument integrated circuits (ICs) to simplify the
 I chose the PCM1808 as the ADC. There were other Texas-Instrument audio ADCs, but through research, I found that the 96KHz sampling rate and 24-bit resolution were more than enough for my project. Additionally, I suspect that the bigger bottlenecks that will be present in my system will be the PCB layout and software. As such, the PCM1808 is a simpler ADC that still will not limit the performance of the project.
 
 ### 2. Bluetooth
-I chose the CC2564C to allow for Bluetooth communication.
-
+I chose the CC2564C to allow for Bluetooth communication. It was the only classic Bluetooth-capable transeiver ICs offered by Texas-Instruments. This is an important distinction since some wireless headphones or earbuds do not support audio over Bluetooth low energy (LE) (like the ones I own). There are, for example, Bluetooth-capable STM32s, but they all supported Bluetooth LE and not classic Bluetooth. I wanted to have the possibility to try writing Bluetooth drivers so the transceiver could not have an integrated "upper layer" Bluetooth stack. I had considered using an ESP32 chip and programming it to act as a simple interface, but I wanted to avoid splitting the experimental driver code across multiple devices, complicating the system beyond necessary. Using only an ESP32 would solve this problem, but I wanted to use an STM32 due to the reasons mentioned above.
 
 ### 3. Microcontroller
