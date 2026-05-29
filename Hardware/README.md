@@ -25,3 +25,11 @@ I chose the STM32F446RET as the microcontroller. I chose the STM32F4 series for 
 
 ### Bluetooth Transciever
 I could've used a tranceiver module. Thsi would have simplified the PCB design and made the manufacuring simpler. For the manufacturing, the skinny traces and clearences approach the manufacturers limits, and the IC in question will have covered pins which will require hot air or reflow to manufacture. The package also has a heat pad in its center meaning that my cheap hot air gun is unlikely to do the trick.
+
+## Revisions
+
+1. Adding an RF sheild
+3. Replacing ceramic capacitors in series on audio line with film capacitors and shifting audio section to the up and right
+4. Fixing RX-RX connection between HCI and MCU, ensuring RX connects to TX
+5. Making I2C connector from a 2mm pitch to a 2.54mm pitch.
+6. Fixing pinout of MCU and changing routing accordingly. AUD_SYNC was on pin 52, but should have been on pin 50.
