@@ -33,3 +33,4 @@ I could've used a tranceiver module. Thsi would have simplified the PCB design a
 4. Fixing RX-RX connection between HCI and MCU, ensuring RX connects to TX
 5. Making I2C connector from a 2mm pitch to a 2.54mm pitch.
 6. Fixing pinout of MCU and changing routing accordingly. AUD_SYNC was on pin 52, but should have been on pin 50.
+7. Changing encoder from general GPIO pins to nearby timer pins capable pins. 
