@@ -35,3 +35,4 @@ I could've used a tranceiver module. Thsi would have simplified the PCB design a
 6. Fixing pinout of MCU and changing routing accordingly. AUD_SYNC was on pin 52, but should have been on pin 50.
 7. Changing encoder from general GPIO pins to nearby timer pins capable pins.
 8. Removing potential acid traps
+9. Correcting I2S connection to PCM1808
